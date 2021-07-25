@@ -10,3 +10,20 @@ function printString(string){
     }
 }
 
+function reverseString(str) { 
+     if (str.length === 0){
+     return ''}else{
+       return str[str.length - 1] + reverseString(str.substr(0, str.length - 1))
+     }
+    }
+
+function isPalindrome(str){
+        if (str.length === 1){
+            return true
+        }else{
+        
+            return str[str.length - 1] === str[0] ? isPalindrome(str.substring(1,str.length -1)) : false
+            }
+}
+ 
+
