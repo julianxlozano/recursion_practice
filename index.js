@@ -26,4 +26,16 @@ function isPalindrome(str){
             }
 }
  
+function includesNumber(array,numToFind){
+    if (array.length === 0){
+        return false
+    }else{
+        if (array[0] === numToFind){
+            return true 
+        }else{ 
+            array.shift()
+          return includesNumber(array,numToFind)
+        }
+    }
+}
 
