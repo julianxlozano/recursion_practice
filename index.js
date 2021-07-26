@@ -39,7 +39,6 @@ function includesNumber(array,numToFind){
 }
 
 function addUpTo(array,index){
-
     if(index === 0){
         return array[index]
     }else{
@@ -56,6 +55,17 @@ function addUpTo(array,index){
 }*/
  
 function maxOf(array){
+    if (array.length === 1){
+        return array[0]
+    }else{
+        if (array[0] > array[1]){
+            array.splice(1,1)
+            return maxOf(array)
+        }else{ 
+            array.shift()
+            return maxOf(array)
+        }
+    }
    
 }
 
