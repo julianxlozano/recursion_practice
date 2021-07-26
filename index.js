@@ -39,12 +39,21 @@ function includesNumber(array,numToFind){
 }
 
 function addUpTo(array,index){
+
+    if(index === 0){
+        return array[index]
+    }else{
+        return array[index] + addUpTo(array, index-1)
+    }
+}
+
+/*function addUpTo(array,index){
     if (array.length -1  === index ){
         return array.reduce((a, b) => a + b, 0)
     }else{
         return addUpTo(array.splice(0,index + 1),index)
     }
-}
+}*/
  
 function maxOf(array){
    
