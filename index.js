@@ -21,7 +21,6 @@ function isPalindrome(str){
         if (str.length === 1){
             return true
         }else{
-        
             return str[str.length - 1] === str[0] ? isPalindrome(str.substring(1,str.length -1)) : false
             }
 }
@@ -37,5 +36,17 @@ function includesNumber(array,numToFind){
           return includesNumber(array,numToFind)
         }
     }
+}
+
+function addUpTo(array,index){
+    if (array.length -1  === index ){
+        return array.reduce((a, b) => a + b, 0)
+    }else{
+        return addUpTo(array.splice(0,index + 1),index)
+    }
+}
+ 
+function maxOf(array){
+   
 }
 
